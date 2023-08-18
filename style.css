@@ -1,0 +1,350 @@
+  @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    isolation: isolate;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    font-family: 'Chivo', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-image-mobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: screen;
+    z-index: -1;
+    
+}
+
+.bg-image-mobile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #121725d5;
+}
+
+.conteiner {
+    padding: 57px 24px 94px 24px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 57px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    color: #54E6AF;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.title span {
+    color: #fff;
+}
+
+.para {
+    margin-top: 16px;
+}
+
+.para p {
+    color: #C2CBE5;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px
+}
+
+.small-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+}
+
+.small-logos img {
+    width: 17%;
+}
+
+.small-logos img:nth-child(3) {
+    width: 30%;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.email input {
+    width: 90%;
+    height: 46px;
+    border-radius: 28px;
+    background: #2C344B;
+    padding-left: 32px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.email input::placeholder {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.email button {
+    width: 90%;
+    height: 46px;
+    border-radius: 28px;
+    background: #54E6AF;
+    box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.50);
+    color: #121725;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.email button:hover {
+    background-color: #B3FFE2;
+    box-shadow: 0px 25px 20px -20px #54E6AF33;
+}
+
+.email .error {
+    color: #FB3E3E;
+    font-size: 12px;
+    font-weight: 400;
+    display: none;
+    position: absolute;
+    left: 54px;
+    bottom: 47px;
+}
+
+.email .passed {
+    color: #43f54c;
+    font-size: 12px;
+    font-weight: 400;
+    display: none;
+    position: absolute;
+    left: 54px;
+    bottom: 47px;
+}
+
+.dots {
+    display: none;
+}
+
+/* ************************************************************************************************************** */
+/* TABLET */
+/* ************************************************************************************************************** */
+
+@media (min-width: 768px) {
+
+    body {
+        isolation:auto;
+        position: relative;
+        display: block;
+        height: auto;
+        background-color: #121725;
+        overflow: auto;
+    }
+
+    .bg-image-mobile {
+        display: none;
+    }
+
+    .bg-image-tablet {
+        position: absolute;
+        right: 0;
+        width: 491px;
+        height: 767px;
+        background-image: url(./assets/tablet/image-host.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .logo {
+        position: absolute;
+        left: 39px;
+        top: 50px;
+    }
+
+    .conteiner {
+        padding: 57px 24px 0px 0px;
+        margin-left: 39px;
+    }
+
+    .content {
+        width: 635px;
+        display: flex;
+        text-align: left;
+        align-items: start;
+        background-color: #121725;
+        padding-top: 88px;
+        margin-top: 210px;
+    }
+
+    .title h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .para {
+        margin-top: 30px;
+    }
+
+    .para p {
+        font-size: 18px;
+        line-height: 28px;
+        color: #C2CBE5;
+        margin-right: 190px;
+    }
+
+    .small-logos {
+        justify-content: left;
+        order: 1;
+        margin-top: 64px;
+    }
+
+    .email {
+        display: block;
+        margin-top: 40px;
+        position: relative;
+    }
+    
+    .email input {
+        width: 427px;
+        height: 56px;
+    }
+
+    .email button {
+        width: 162px;
+        height: 46px;
+        position: absolute;
+        left: 260px;
+        top: 4.5px;
+    }
+
+    .email .error {
+        margin-top: 8px;
+        margin-left: 32px;
+        top: 55px;
+        left: 0;
+    }
+
+    .email .passed {
+        margin-top: 8px;
+        margin-left: 32px;
+        top: 55px;
+        left: 0;
+    }
+
+    .small-logos {
+        gap: 40px;
+    }
+
+    .small-logos img {
+        width:auto;
+    }
+    
+    .small-logos img:nth-child(3) {
+        width: auto;
+    }
+
+    .dots {
+        display: block;
+        margin-top: 153px;
+        margin-left: 30px;
+    }
+
+}
+
+/* ******************************************************************************************************************* */
+/* DESKTOP */
+/* ******************************************************************************************************************* */
+
+@media (min-width: 1200px) {
+
+    .bg-image-tablet {
+        display: none;
+    }
+
+    .bg-image-desktop {
+        position: absolute;
+        right: 0;
+        width: 888px;
+        height: 640px;
+        background-image: url(./assets/desktop/image-host.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        margin-top: 130px;
+    }
+
+    .conteiner {
+        margin-left: 165px;
+    }
+
+    .content {
+        padding-top: 85px;
+        width: 723px;
+        /* background: #54E6AF; */
+    }
+
+    .title h1 {
+        font-size: 52px;
+        line-height: 62px;
+    }
+
+    .logo {
+        left: 165px;
+        top: 102px;
+    }
+
+    .dots {
+        margin: 0;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 718px;
+    }
+
+    .para {
+        margin-top: 24px;
+    }
+
+}
